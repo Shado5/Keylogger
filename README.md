@@ -136,13 +136,6 @@ The project intentionally respects these constraints to highlight real-world def
 
 ---
 
-## Portfolio Usage
-Suggested description:
-
-"This project explores how modern operating systems restrict global keyboard capture and demonstrates an encrypted, controlled input-monitoring tool designed to highlight OS-level defenses against keylogging."
-
----
-
 ## License
 Educational use only.
 Do not deploy on systems you do not own or manage.
