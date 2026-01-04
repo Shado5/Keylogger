@@ -33,7 +33,6 @@ Because Windows Subsystem for Linux (WSL) does not expose global keyboard events
 ethical_keylogger/
 ├── generate_key.py    # Generates the encryption key (run once)
 ├── key.key            # Encryption key (required to decrypt logs)
-├── keylogger.py       # Global keylogger (Windows / X11 only)
 ├── keylogger.py       # WSL-compatible input monitor
 ├── view_logs.py       # Decrypts and displays logs
 ├── logs.enc           # Encrypted keystroke logs
@@ -60,6 +59,24 @@ Python libraries (installed in a virtual environment):
 python3 -m venv venv
 source venv/bin/activate
 ```
+
+### 2. Install dependencies
+```
+pip install cryptography pynput
+```
+
+---
+
+## Generate the Encryption Key (Run Once)
+This step creates the encryption key used to secure keystroke logs.
+
+```
+python3 generate_key.py
+```
+
+Do not regenerate this key unless you intentionally want to lose access to existing logs.
+
+---
 
 ## Running the Project in WSL
 Use the WSL-compatible logger:
@@ -91,11 +108,10 @@ Example output:
 2026-01-04 20:22:11.301234 | e
 2026-01-04 20:22:11.489012 | l
 ```
-## Deleting Previous Logs
+## Deleting Logs
 
-To delete historical logs, simply delete the logs.enc file.
+To delete the logs simply delete the logs.enc file. I new one gets created when running the script.
 
-It will be recreated the next time the script is run.  
 ---
 
 ## Defensive Security Explanation
@@ -120,6 +136,13 @@ The project intentionally respects these constraints to highlight real-world def
 
 ---
 
+## Portfolio Usage
+Suggested description:
+
+"This project explores how modern operating systems restrict global keyboard capture and demonstrates an encrypted, controlled input-monitoring tool designed to highlight OS-level defenses against keylogging."
+
+---
+
 ## License
 Educational use only.
 Do not deploy on systems you do not own or manage.
@@ -129,5 +152,4 @@ Do not deploy on systems you do not own or manage.
 ## Status
 Fully functional in WSL
 Ethical by design
-
 
