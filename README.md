@@ -151,4 +151,3 @@ Do not deploy on systems you do not own or manage.
 
 Fully functional in WSL
 Ethical by design
-Suitable for cybersecurity and IT portfolios
