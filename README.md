@@ -41,7 +41,7 @@ ethical_keylogger/
 ├── wsl_keylogger.py   # WSL-compatible input monitor
 ├── view_logs.py       # Decrypts and displays logs
 ├── logs.enc           # Encrypted keystroke logs
-└── venv/              # Python virtual environment
+└── venv/              # Python virtual environment 
 ```
 
 ---
